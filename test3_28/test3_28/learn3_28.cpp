@@ -1,23 +1,38 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
-//求10个数中的最大值
+//在屏幕上写个乘法口诀表
 int main()
 {
-	int arr[] = { 11,2,3,14,5,16,7,8,9,10 };
-	int max = arr[0];
 	int i = 0;
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	for (i = 1; i <sz; i++)
+	for (i = 1; i <=9; i++)
 	{
-		if (arr[i] > max)
+		int j = 0;
+		for (j = 1; j <= i; j++)
 		{
-			max = arr[i];
+			printf("%d*%d=%2d ", i, j, i * j);
 		}
+		printf("\n");
 	}
-	printf("max=%d ", max);
 	return 0;
 }
+//求10个数中的最大值
+//int main()
+//{
+//	int arr[] = { 11,2,3,14,5,16,7,8,9,10 };
+//	int max = arr[0];
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 1; i <sz; i++)
+//	{
+//		if (arr[i] > max)
+//		{
+//			max = arr[i];
+//		}
+//	}
+//	printf("max=%d ", max);
+//	return 0;
+//}
 //计算1/1-1/2+1/3-1/4+...+1/99-1/100的值，并打印出来
 //int main()
 //{
